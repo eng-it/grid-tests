@@ -17,7 +17,7 @@ echo date: `date`
 echo hostname: `hostname -f`
 echo working dir: `pwd`
 echo kerberos tickets: `bash -c "klist 2>&1"`
-echo homedir access: `bash -c "ls -d /ad/eng/users/j/e/jesse08/ 2>&1"`
+echo homedir access: `bash -c "ls -d $HOME/ 2>&1"`
 echo MODULESHOME: $MODULESHOME
 echo MODULEPATH: $MODULEPATH
 echo PATH: $PATH
