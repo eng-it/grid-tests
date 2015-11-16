@@ -1,5 +1,4 @@
 # http://collaborate.bu.edu/engit/Grid/Matlab
-#$ -S /bin/sh
 #$ -cwd
 #$ -N matlabmcctest 
 #$ -j y

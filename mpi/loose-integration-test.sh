@@ -1,6 +1,5 @@
 #!/bin/bash
 # 
-#$ -S /bin/bash
 #$ -cwd
 
 # Note that NSLOTS should be higher than the number of cores on a given node in

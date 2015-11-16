@@ -1,7 +1,7 @@
 # Test a very basic shell script with different variants of the shell option,
 # including the default setting.
 
-queue ?= debug.q
+queue ?= bme.q
 
 all: bash sh default
 	qstat
@@ -9,6 +9,8 @@ bash:
 	qsub -q $(queue) -N qsub-test-bash -S /bin/bash qsub-test.sh
 sh:
 	qsub -q $(queue) -N qsub-test-sh -S /bin/sh qsub-test.sh
+csh:
+	qsub -q $(queue) -N qsub-test-sh -S /bin/csh qsub-test.sh
 default:
 	qsub -q $(queue) -N qsub-test-default qsub-test.sh
 clean:

@@ -1,7 +1,7 @@
 # Tests a basic compiled MPI job, using OpenMPI's mpicc and tight integration
 # with Grid Engine.
 
-queue = debug.q
+queue = bme.q
 
 all: init compile_and_run
 	qstat
