@@ -1,5 +1,4 @@
 #!/bin/bash
-#$ -S /bin/bash
 #$ -cwd
 ##$ -j y
 #$ -pe openmpi 4

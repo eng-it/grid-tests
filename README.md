@@ -5,11 +5,11 @@ Ready-to-run tests/examples for various Grid Engine tasks.  Just log onto enggri
     jesse08@engineering-grid1 /mnt/nokrb/jesse08/grid-tests/qsub $ ls
     Makefile  qsub-test.sh
     jesse08@engineering-grid1 /mnt/nokrb/jesse08/grid-tests/qsub $ make
-    qsub -q debug.q -N qsub-test-bash -S /bin/bash qsub-test.sh
+    qsub -q bme.q -N qsub-test-bash -S /bin/bash qsub-test.sh
     Your job 7187175 ("qsub-test-bash") has been submitted
-    qsub -q debug.q -N qsub-test-sh -S /bin/sh qsub-test.sh
+    qsub -q bme.q -N qsub-test-sh -S /bin/sh qsub-test.sh
     Your job 7187176 ("qsub-test-sh") has been submitted
-    qsub -q debug.q -N qsub-test-default qsub-test.sh
+    qsub -q bme.q -N qsub-test-default qsub-test.sh
     Your job 7187177 ("qsub-test-default") has been submitted
     qstat
     job-ID  prior   name       user         state submit/start at     queue                          slots ja-task-ID 

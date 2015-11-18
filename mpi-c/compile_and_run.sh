@@ -1,4 +1,3 @@
-#$ -S /bin/bash
 #$ -cwd
 #$ -N mpi_c_test
 #$ -pe openmpi 4

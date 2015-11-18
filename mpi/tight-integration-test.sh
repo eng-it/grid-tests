@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # 
-#$ -S /bin/bash
 #$ -cwd
 #$ -pe openmpi 8
 
