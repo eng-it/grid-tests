@@ -4,6 +4,7 @@
 #$ -N qsub-krb5
 #$ -cwd
 #$ -j y
+#$ -l s_vmem=512M
 
 # Copy the prepared kerberos credentials cache over to local disk (with the
 # appropriate permissions!) and make sure kerberos will use it.  As soon as this
