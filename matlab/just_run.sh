@@ -1,11 +1,13 @@
 # http://collaborate.bu.edu/engit/Grid/Matlab
-#$ -cwd
 #$ -N matlabtest 
+#$ -cwd
 #$ -j y
+#$ -pe threaded 4
+#$ -l s_vmem=2G
 
 hostname
 date
 
 export MATLAB_PREFDIR=/mnt/nokrb/$USER/MATLAB
 export MCR_CACHE_ROOT=/mnt/nokrb/$USER/MATLAB
-matlab -r gridtest -nodesktop -nojvm -nosplash
+matlab85 -nodesktop -nosplash -r gridtest

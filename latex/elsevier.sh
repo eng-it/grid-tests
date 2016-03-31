@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+#$ -cwd
+#$ -l s_vmem=1G
 
 # Load the "tex" module first so that the third-party files (elsarticle.cls and
 # associated files in this case) can be found by the LaTeX commands.  pdflatex

@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 #$ -cwd
+#$ -l s_vmem=2G
 
 hostname
 module load gcc

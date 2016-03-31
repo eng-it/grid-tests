@@ -1,8 +1,9 @@
 #!/bin/bash
 #
+#$ -N comsol-batch
 #$ -cwd
 #$ -pe threaded 4
-#$ -N comsol-batch
+#$ -l s_vmem=3G
 #$ -j y
 
 hostname

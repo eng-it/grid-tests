@@ -19,9 +19,9 @@ queue ?= bme.q
 all: python-anaconda-direct
 	qstat
 python-anaconda-direct:
-	qsub -q $(queue) -j y -cwd -b y -N python-anaconda-direct ./python-anaconda-test.py
+	qsub -q $(queue) -j y -l s_vmem=1G -cwd -b y -N python-anaconda-direct ./python-anaconda-test.py
 python-anaconda-wrapper:
-	qsub -q $(queue) -j y python-anaconda-test.sh
+	qsub -q $(queue) -j y -l s_vmem=1G python-anaconda-test.sh
 clean:
 	rm -f python-anaconda-direct.{o,e,po,pe}*
 	rm -f python-anaconda.{o,e,po,pe}*

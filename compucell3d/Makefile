@@ -12,5 +12,5 @@ init:
 cellsort:
 	qsub -q $(queue) cellsort.sh
 clean:
-	rm -f  *.{o,e}*
+	rm -f  cellsort.{o,e}*
 	rm -rf cellsort_2D_results

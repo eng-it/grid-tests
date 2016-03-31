@@ -10,6 +10,7 @@
 # 
 #$ -N qsub-test
 #$ -cwd
+#$ -l s_vmem=256M
 #$ -j y
 echo SHELL: $SHELL
 echo User: `whoami`

@@ -4,6 +4,7 @@
 #
 #$ -cwd
 #$ -pe mpi 4
+#$ -l s_vmem=2G
 hostname
 date
 engine="/ad/eng/opt/64/lumerical/mpitest/cpi-ompi-lcl"

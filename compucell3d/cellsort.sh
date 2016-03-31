@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
+#$ -N cellsort
 #$ -cwd
+#$ -l s_vmem=2G
 
 # Run the CompuCell3D Demo "cellsort_2D", working in the current directly only.
 DIR="$(pwd)"
