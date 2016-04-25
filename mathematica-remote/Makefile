@@ -16,11 +16,13 @@
 # if off-campus, and not restricted by a firewall on the ports being used by the
 # TCP/IP link.
 
+queue = bme.q
+
 all: mathematica-remote
 	qstat
 
 mathematica-remote:
-	qsub mathematica-remote.sh $(LINK)
+	qsub -q "$(queue)" mathematica-remote.sh "$(LINK)"
 
 # Remove all stdout/stderr files for all test cases.
 clean:
