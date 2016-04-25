@@ -3,13 +3,15 @@
 # These are just a few of the languages SWIG can support; see "swig --help"
 # for a list.
 
+queue = bme.q
+
 all: swig-python
 
 swig-tcl:
-	qsub swig-tcl.sh
+	qsub -q "$(queue)" swig-tcl.sh
 
 swig-python:
-	qsub swig-python.sh
+	qsub -q "$(queue)" swig-python.sh
 
 clean:
 	rm -f swig-{python,tcl}.{o,e}*
