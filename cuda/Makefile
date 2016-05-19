@@ -21,6 +21,7 @@ queue = budge.q
 # bandwidthTest: NVIDIA example CUDA program for reporting device bandwidth
 # saxpy:         A very simple compiled CUDA example, written in C
 ALL = intro deviceQuery bandwidthTest saxpy
+.PHONY: $(ALL)
 all: $(ALL)
 $(ALL):
 	qsub -q $(queue) $@.sh
