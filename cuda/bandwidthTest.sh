@@ -10,5 +10,5 @@ module load cuda
 
 nvcc -I$CUDA_PATH/samples/common/inc/ \
      $CUDA_PATH/samples/1_Utilities/bandwidthTest/bandwidthTest.cu \
-     -o deviceQuery \
-     && ./deviceQuery
+     -o bandwidthTest \
+     && ./bandwidthTest
