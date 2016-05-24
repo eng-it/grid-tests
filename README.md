@@ -19,5 +19,9 @@ Ready-to-run tests/examples for various Grid Engine tasks.  Just log onto enggri
     7187177 0.00000 qsub-test- jesse08      qw    10/09/2015 16:40:02                                    1        
     jesse08@engineering-grid1 /mnt/nokrb/jesse08/grid-tests/qsub $ ls
     Makefile  qsub-test-bash.o7187175  qsub-test-default.o7187177  qsub-test.sh  qsub-test-sh.o7187176
-    
+
+All example jobs run under a particular grid queue, often `bme.q` or a
+GPU-enabled queue if applicable.  This can be overridden by setting the queue
+when running `make`, like `make queue=budge.q`.
+
 See the `Makefile` in a given directory for more information.
