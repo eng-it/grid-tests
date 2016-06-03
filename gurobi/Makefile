@@ -30,3 +30,4 @@ clean:
 	rm -f gurobi_test_*.{o,e}*
 	rm -f coins.sol
 	rm -f {mip1,sudoku}.lp
+	rm -f mip1.m
