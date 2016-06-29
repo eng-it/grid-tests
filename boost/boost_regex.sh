@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #$ -cwd
 #$ -l s_vmem=2G
+#$ -j y
 #$ -N boost_regex
 
 module load boost
