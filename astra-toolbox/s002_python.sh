@@ -16,5 +16,3 @@ cp -u $ASTRA_ROOT/samples/python/phantom.mat .
 
 # Run the example within Python.
 python "./$script.py"
-echo
-echo "All done!"

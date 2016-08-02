@@ -21,5 +21,3 @@ patch --quiet --batch < $script.m.patch
 # compatibility with Astra, so we don't have to specify a version manually.
 export HOME=/mnt/nokrb/$USER
 matlab -nodesktop -nosplash -r "$script; exit"
-echo
-echo "All done!"

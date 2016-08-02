@@ -7,10 +7,10 @@
 -figure(1); imshow(P, []);
 -figure(2); imshow(sinogram, []);
 +h = figure('visible', 'off'); imshow(P, []);
-+print('P_matlab.png', '-dpng');
++print('s001_matlab_P.png', '-dpng');
 +close(h)
 +h = figure('visible', 'off'); imshow(sinogram, []);
-+print('sinogram_matlab.png', '-dpng');
++print('s001_matlab_sinogram.png', '-dpng');
 +close(h)
  
  

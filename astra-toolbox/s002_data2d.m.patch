@@ -1,11 +1,13 @@
---- s002_data2d.m	2016-08-02 10:54:54.614444000 -0400
-+++ s002_data2d.m.modified	2016-08-02 10:56:57.125778000 -0400
-@@ -44,7 +44,7 @@
+--- s002_data2d.m	2016-08-02 11:50:38.694518000 -0400
++++ s002_data2d.m.modified	2016-08-02 11:53:52.614652000 -0400
+@@ -44,7 +44,10 @@
  % Retrieve data
  
  R = astra_mex_data2d('get', v2);
--h = figure('visible', 'off')
 +h = figure('visible', 'off');
  imshow(R, []);
- print('s002_matlab_R.png', '-dpng');
- close(h)
++print('s002_matlab_R.png', '-dpng');
++close(h)
+ 
+ 
+ % Retrieve data as a single array. Since astra internally stores
