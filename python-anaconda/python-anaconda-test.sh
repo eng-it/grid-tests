@@ -1,4 +1,4 @@
 #$ -N python-anaconda
 #$ -cwd
-source add_python-anaconda.sh
+module load anaconda
 python python-anaconda-test.py
