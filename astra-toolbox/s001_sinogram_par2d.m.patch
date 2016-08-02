@@ -1,0 +1,17 @@
+--- s001_sinogram_par2d.m	2016-08-01 14:28:49.458373000 -0400
++++ s001_sinogram_par2d.m.modified	2016-08-01 14:23:30.802180000 -0400
+@@ -25,8 +25,12 @@
+ % of up to 10 seconds for initialization.
+ [sinogram_id, sinogram] = astra_create_sino_gpu(P, proj_geom, vol_geom);
+ 
+-figure(1); imshow(P, []);
+-figure(2); imshow(sinogram, []);
++h = figure('visible', 'off'); imshow(P, []);
++print('P_matlab.png', '-dpng');
++close(h)
++h = figure('visible', 'off'); imshow(sinogram, []);
++print('sinogram_matlab.png', '-dpng');
++close(h)
+ 
+ 
+ % Free memory

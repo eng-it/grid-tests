@@ -1,0 +1,25 @@
+--- s001_sinogram_par2d.py	2016-08-02 11:38:28.260581000 -0400
++++ s001_sinogram_par2d.py.modified	2016-08-02 11:38:06.775354000 -0400
+@@ -26,6 +26,9 @@
+ 
+ import astra
+ import numpy as np
++import matplotlib
++matplotlib.use('SVG')
++import matplotlib.pyplot as plt
+ 
+ # Create a basic 256x256 square volume geometry
+ vol_geom = astra.create_vol_geom(256, 256)
+@@ -50,9 +53,11 @@
+ pylab.gray()
+ pylab.figure(1)
+ pylab.imshow(P)
++plt.savefig('s001_python_P.svg')
+ pylab.figure(2)
+ pylab.imshow(sinogram)
+-pylab.show()
++#pylab.show()
++plt.savefig('s001_python_sinogram.svg')
+ 
+ 
+ # Free memory

@@ -1,0 +1,22 @@
+--- s002_data2d.py	2016-08-02 11:13:56.314779000 -0400
++++ s002_data2d.py.modified	2016-08-02 11:10:53.233785000 -0400
+@@ -26,6 +26,9 @@
+ 
+ import astra
+ import numpy as np
++import matplotlib
++matplotlib.use('SVG')
++import matplotlib.pyplot as plt
+ 
+ vol_geom = astra.create_vol_geom(256, 256)
+ 
+@@ -67,7 +70,8 @@
+ import pylab
+ pylab.gray()
+ pylab.imshow(R)
+-pylab.show()
++#pylab.show()
++plt.savefig('s002_python_R.svg')
+ 
+ 
+ # Free memory
