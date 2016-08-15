@@ -30,5 +30,4 @@ directory for more information.
 ## Contributing
 
 If you have an example you'd like included here, please [let us
-know](http://www.bu.edu/eng/engit/) or just make a [github pull
-request](pull/new/master).
+know](http://www.bu.edu/eng/engit/) or just make a github pull request.
