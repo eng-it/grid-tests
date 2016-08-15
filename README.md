@@ -1,5 +1,7 @@
 # grid-tests
-Ready-to-run tests/examples for various Grid Engine tasks.  Just log onto enggrid, clone this into `/mnt/nokrb/$USER/grid-tests/`, cd into a directory, and run `make`.  For example:
+Ready-to-run tests/examples for various Grid Engine tasks.  Just log onto
+enggrid, clone this into `/mnt/nokrb/$USER/grid-tests/`, cd into a directory,
+and run `make`.  For example:
 
     jesse08@engineering-grid1 /mnt/nokrb/jesse08/grid-tests $ cd qsub/
     jesse08@engineering-grid1 /mnt/nokrb/jesse08/grid-tests/qsub $ ls
@@ -22,6 +24,11 @@ Ready-to-run tests/examples for various Grid Engine tasks.  Just log onto enggri
 
 All example jobs run under a particular grid queue, often `bme.q` or a
 GPU-enabled queue if applicable.  This can be overridden by setting the queue
-when running `make`, like `make queue=budge.q`.
+when running `make`, like `make queue=budge.q`.  See the `Makefile` in a given
+directory for more information.
 
-See the `Makefile` in a given directory for more information.
+## Contributing
+
+If you have an example you'd like included here, please [let us
+know](http://www.bu.edu/eng/engit/) or just make a [github pull
+request](pull/new/master).
