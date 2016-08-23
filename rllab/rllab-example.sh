@@ -7,18 +7,20 @@
 # Anaconda will try to access our home directory to manage configurations
 # (separately from the location of an environment directory itself), and
 # doesn't seem to have any specific option for changing this behavior.  This
-# won't work in a batch job.  So, we'll manually change our home directory to
-# our nokrb directory for any Anaconda-related tasks here, in addition to
-# installing our custom environment there.
-NOKRB=/mnt/nokrb/$USER
-export HOME=$NOKRB
-# From this point on the procedure should be the same for either
-# interactive-only installs to the actual home directory, or workaround
-# installs to /mnt/nokrb/$USER as described above.
+# won't work in a batch job.  So, we'll manually change our home directory
+# within the context of this job.
+# In general it would make sense to use /mnt/nokrb/$USER, but in this case
+# we'll use this example directory to keep things self-contained.
+export HOME_ORIG="$HOME"
+export HOME=./conda-home/
 
 # One of rllab's example scripts.  Specify as an argument here or just leave
 # the default.
-RLLAB_EXAMPLE=${1:-trpo_cartpole_stub.py}
+RLLAB_EXAMPLE=${1:-trpo_gym.py}
+
+echo "rllab example: $RLLAB_EXAMPLE"
+hostname
+date
 
 module load anaconda
 
@@ -33,7 +35,7 @@ fi
 # directory, we'll just use that.
 RLLAB="./rllab/"
 
-if [ -d $NOKRB/.conda/envs/rllab ]
+if [ -d $HOME/.conda/envs/rllab ]
 then
 	echo "Environment directory already exists; skipping install."
 else
@@ -45,8 +47,13 @@ fi
 source activate rllab
 
 # To actually use rllab, we can try one of the examples included in the
-# repository.  On first run rllab reports "Personal config created, but you
-# should probably edit it before further experiments are run."  If we run it
-# again it seems to go to completion.
-PYTHONPATH="$RLLAB" python "$RLLAB/examples/$RLLAB_EXAMPLE"
-PYTHONPATH="$RLLAB" python "$RLLAB/examples/$RLLAB_EXAMPLE"
+# repository.
+
+# A few points about how the examples run:
+#  * PYTHONPATH is given manually since rllab doesn't have a full installation
+#    process right now.  This will let Python locate the rllab package.
+#  * xvfb-run will create a fake screen to render graphics with.  Some examples
+#    require a display even though it's not interactive.  For the required
+#    OpenGL support, a screen with a sufficient color depth must be specified
+#    as well (the 1024x1024x24 part).
+PYTHONPATH="$RLLAB" xvfb-run -s "-screen 0 1024x1024x24" python "$RLLAB/examples/$RLLAB_EXAMPLE"

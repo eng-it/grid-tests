@@ -7,11 +7,15 @@
 
 queue ?= bme.q
 
+example ?= trpo_gym.py
+
 all: rllab-example
 	qstat
 
+# This wrapper scripts will call a specific rllab example Python script, with
+# some workarounds for home directory access and graphics rendering.
 rllab-example:
-	qsub -q $(queue) $@.sh
+	qsub -q $(queue) $@.sh $(example)
 
 clean:
 	rm -rf rllab/
