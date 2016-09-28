@@ -1,4 +1,3 @@
-# http://collaborate.bu.edu/engit/Grid/Matlab
 #$ -cwd
 #$ -N matlabmcctest 
 #$ -j y
@@ -10,5 +9,12 @@ date
 
 export MATLAB_PREFDIR=/mnt/nokrb/$USER/MATLAB
 export MCR_CACHE_ROOT=/tmp/$USER/$RANDOM
-mcc85 -m gridtest
-./run_gridtest.sh /ad/eng/opt/matlab-8.5/
+MATLAB="/ad/eng/opt/matlab-8.5"
+echo
+echo "Compiling with mcc"
+echo
+"$MATLAB/bin/mcc" -v -m gridtest make_pretty_mesh
+echo
+echo "Executing compiled MATLAB code"
+echo
+./run_gridtest.sh "$MATLAB"

@@ -1,4 +1,3 @@
-# http://collaborate.bu.edu/engit/Grid/Matlab
 #$ -N matlabtest 
 #$ -cwd
 #$ -j y
@@ -9,5 +8,4 @@ hostname
 date
 
 export MATLAB_PREFDIR=/mnt/nokrb/$USER/MATLAB
-export MCR_CACHE_ROOT=/mnt/nokrb/$USER/MATLAB
 matlab85 -nodesktop -nosplash -r gridtest
